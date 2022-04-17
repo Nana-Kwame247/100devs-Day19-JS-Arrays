@@ -1,7 +1,7 @@
 // *Variables*
 // Declare a variable, assign it a boolean, and alert the value
 let fund = true;
-alert(fund);
+// alert(fund);
 
 // Declare a variable, reassign it to your favorite color, and console log the value
 
@@ -22,8 +22,49 @@ takeFourNumbers(20, 10, 5, 4);
 
 // Create a function that takes in 2 numbers. Console log the first number to the power of the second. Call the function.
 
+function takeTwoNumbers(a, b) {
+  //console.log(a ** b);
+  console.log(Math.pow(a, b));
+}
+
+takeTwoNumbers(3, 2);
 // *Conditionals*
 // Create a function that takes in a boolean and a string. If the boolean is true, alert the string. If the boolean is false, console log the string
 
+let a;
+let b;
+
+function booleanAndString(a, b) {
+  if (a === true) {
+    alert(b);
+  } else if (a === false) {
+    console.log(b);
+  } else {
+    alert(`check your data`);
+  }
+}
+
+//function expression
+
+const booleanAndStringExpression = (b, str) =>
+  b ? alert(str) : console.log(str);
+
 //*Loops*
 //Create a function that takes in a number. Console log all values from 1 to that number, but if the number is divisible by 3 log "fizz" instead of that number, if the number is divisible by 5 log "buzz" instead of the number, and if the number is divisible by 3 and 5 log "fizzbuzz" instead of that number
+
+function takeANumber(a) {
+  for (let i = 1; i <= a; i++) {
+    if (i % 15 == 0) {
+      console.log(`fizzbuzz`);
+    } else if (i % 3 == 0) {
+      console.log(`fizz`);
+    } else if (i % 5 == 0) {
+      console.log(`buzz`);
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+takeANumber(100);
+takeANumber(50);
